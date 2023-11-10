@@ -13,6 +13,7 @@ import { NgbdButtonsComponent } from './buttons/buttons.component';
 import { CardsComponent } from './card/card.component';
 import { TableComponent } from "./table/table.component";
 import { CrearVehiculoComponent } from './crear-vehiculo/crear-vehiculo.component';
+import { VehiculoInComponent } from './vehiculo-in/vehiculo-in.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { CrearVehiculoComponent } from './crear-vehiculo/crear-vehiculo.componen
     TableComponent
   ],
   declarations: [
-    CrearVehiculoComponent
+    CrearVehiculoComponent,
+    VehiculoInComponent
   ],
 })
 export class ComponentsModule { }
