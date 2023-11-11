@@ -12,15 +12,23 @@ export class CrearVehiculoComponent {
 
   listCrear :crearModel []=[];
 
+
+
+
   constructor(private crearService: crearVehiculo) {
   }
 
   ngOnInit(): void {
     this.crearService.getAllCrear().subscribe(data => {
-      this.listCrear =data;
+      this.listCrear = data;
       console.log(data);
     });
-  }
 
-}
 
+    {
+
+
+
+    }
+
+  }}

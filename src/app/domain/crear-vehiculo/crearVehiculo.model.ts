@@ -4,4 +4,7 @@ export interface crearModel{
   numeroBahia: string;
   tipoVehiculo: string;
 
+
 }
+
+

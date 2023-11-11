@@ -8,7 +8,7 @@ import {crearModel} from "./crearVehiculo.model";
 @Injectable({providedIn:'root'})
 export class crearVehiculo{
 
-  apiUserUrl = 'http://localhost:8081/usuarios'
+  apiUserUrl = 'http://localhost:8081/crear-vehiculo'
 
   constructor(private httpClient: HttpClient) {
   }
