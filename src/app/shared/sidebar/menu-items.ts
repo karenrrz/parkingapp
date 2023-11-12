@@ -11,9 +11,17 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
+    path: '/component/inicio',
+    title: 'Inicio',
+    icon: 'bi bi-ev-front',
+    class: '',
+    extralink: false,
+    submenu: []
+  },
+  {
     path: '/component/crear-vehiculo',
     title: 'Vehiculos',
-    icon: 'bi bi-car',
+    icon: 'bi bi-car-front',
     class: '',
     extralink: false,
     submenu: []
@@ -21,7 +29,7 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '/component/vehiculo-in',
     title: 'ingreso vehiculo',
-    icon: 'bi bi-car',
+    icon: 'bi bi-door-open-fill',
     class: '',
     extralink: false,
     submenu: []
