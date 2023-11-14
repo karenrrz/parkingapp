@@ -3,9 +3,6 @@ export interface UserModel{
   placa: string;
   horaEntrada: string;
   horaSalida: string;
-  color : string;
-  marca : string;
-  numeroBahia: string;
-  tipoCarroceria: string;
+
 
 }

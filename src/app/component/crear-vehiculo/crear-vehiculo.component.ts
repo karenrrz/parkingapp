@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import {crearModel} from "../../domain/crear-vehiculo/crearVehiculo.model";
 import { crearVehiculo} from "../../domain/crear-vehiculo/crearVehiculo.service";
+import {UserModel} from "../../domain/vehiculo-in/vehiculo.model";
+import {vehiculo} from "../../domain/vehiculo-in/vehiculo.service";
 
 @Component({
   selector: 'app-crear-vehiculo',
@@ -10,25 +12,17 @@ import { crearVehiculo} from "../../domain/crear-vehiculo/crearVehiculo.service"
 })
 export class CrearVehiculoComponent {
 
-  listCrear :crearModel []=[];
+  listUser :UserModel []=[];
 
-
-
-
-  constructor(private crearService: crearVehiculo) {
+  constructor(private userService: crearVehiculo) {
   }
 
   ngOnInit(): void {
-    this.crearService.getAllCrear().subscribe(data => {
-      this.listCrear = data;
+    this.userService.getAllCrear().subscribe(data => {
+      this.listUser =data;
       console.log(data);
     });
+  }
 
 
-    {
-
-
-
-    }
-
-  }}
+  }

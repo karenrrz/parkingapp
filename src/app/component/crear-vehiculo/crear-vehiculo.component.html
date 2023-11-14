@@ -4,23 +4,37 @@
       <div class="col-md-4">
         <img src="/assets/images/parking.jpeg" alt="Parking Image" class="img-fluid" />
       </div>
+      <br>
       <div class="col-md-8">
-        <h4 class="card-title">Crear Vehículo</h4>
-        <form action="/my-handling-form-page" method="post">
-          <div class="form-group">
-            <br>
-            <label for="placa">Placa:</label>
-            <input type="text" id="placa" name="placa" class="form-control" placeholder="Ingrese la placa del vehículo" />
-          </div>
-          <br>
-          <div class="form-group">
-            <label for="bahia">Numero Bahía:</label>
-            <input type="text" id="bahia" name="bahia" class="form-control" placeholder="Ingrese el número de bahía" />
-          </div>
-          <br>
-          <button type="button" class="btn btn-secondary btn-sm" onclick="registrarCarro()">Registrar Carro</button>
-        </form>
+        <h4 class="card-title">Vehiculos</h4>
+        <div class="table-responsive">
+
+            <table class="table table-hover align-middle text-nowrap table-bordered table-striped">
+              <thead>
+              <tr>
+                <th class="text-dark font-medium fs-4">Id</th>
+                <th class="text-dark font-medium fs-4">Placa</th>
+
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let user of listUser">
+                <td>{{ user.id }}</td>
+                <td>{{ user.placa }}</td>
+
+                <td>{{ user.horaEntrada }}</td>
+                <td>{{ user.horaSalida }}</td>
+              </tr>
+              <td></td>
+              <td><input type="text"  name="placa" class="form-control" /></td>
+
+              </tbody>
+            </table>
+          <button type="button" style="background-color: #4CAF50; color: white;"  onclick="'http://localhos:3306/parkinglot'">Registrar</button>
+         <br><br> <button type="button" style="background-color: red; color: white;" onclick="alert('El vehiculo no se registrara')">cancelar</button>
+        </div>
       </div>
-    </div>
-  </div>
+      </div>
+      </div>
+
 

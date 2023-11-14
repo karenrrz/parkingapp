@@ -8,42 +8,36 @@
           <th class="text-dark font-medium fs-4">#</th>
           <th class="text-dark font-medium fs-4">Placa</th>
           <th class="text-dark font-medium fs-4">Hora Ingreso</th>
-          <th class="text-dark font-medium fs-4">horaSalida</th>
-          <th class="text-dark font-medium fs-4">Color</th>
-          <th class="text-dark font-medium fs-4">marca</th>
-          <th class="text-dark font-medium fs-4">Bahia</th>
-          <th class="text-dark font-medium fs-4">Tipo de carroceria</th>
+          <th class="text-dark font-medium fs-4">hora Salida</th>
           <th class="text-dark font-medium fs-4">Actions</th>
         </tr>
         </thead>
         <tbody>
-        <tr >
+        <tr *ngFor="let user of listUser">
           <td>
-            1
+            {{user.id}}
           </td>
           <td>
-            KGU454
+            {{user.placa}}
           </td>
           <td>
-            10/11/2023 10:50 am
+            {{user.horaEntrada}}
           </td>
-          <td>
 
+          <td>
+            {{user.horaSalida}}
           </td>
+
+
           <td>
             <input type="color" />
           </td>
-          <td>
 
-          </td>
-          <td>
-
-          </td>
         <td>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='http://localhost:4200/component/usuarios'">devolver</button>
-          </div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end"></div>
         </td>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='http://localhos:4200/crear-vehiculo'">devolver</button>
+
         </tbody>
       </table>
     </div>
