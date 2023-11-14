@@ -7,7 +7,7 @@ import {UserModel} from "./vehiculo.model";
 
 export class vehiculo{
 
-  apiUserUrl = 'http://localhos:8080/parkinglot'
+  apiUserUrl = 'http://localhost:8080/api/parking/'
 
   constructor(private httpClient: HttpClient) {
   }

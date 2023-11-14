@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
-
-import {crearModel} from "../../domain/crear-vehiculo/crearVehiculo.model";
-import { crearVehiculo} from "../../domain/crear-vehiculo/crearVehiculo.service";
-import {UserModel} from "../../domain/vehiculo-in/vehiculo.model";
-import {vehiculo} from "../../domain/vehiculo-in/vehiculo.service";
+import { CrearModel } from "../../domain/crear-vehiculo/crearVehiculo.model";
+import { CrearVehiculoService } from "../../domain/crear-vehiculo/crearVehiculo.service";
 
 @Component({
   selector: 'app-crear-vehiculo',
@@ -12,17 +9,34 @@ import {vehiculo} from "../../domain/vehiculo-in/vehiculo.service";
 })
 export class CrearVehiculoComponent {
 
-  listUser :UserModel []=[];
+  listUser: CrearModel[] = [];
+  nuevoVehiculo: { id: number; placa: string; horaEntrada: string } = { id: 0, placa: '', horaEntrada: '' };
 
-  constructor(private userService: crearVehiculo) {
-  }
+  constructor(private crearService: CrearVehiculoService) {}
 
   ngOnInit(): void {
-    this.userService.getAllCrear().subscribe(data => {
-      this.listUser =data;
-      console.log(data);
-    });
+    this.obtenerTodosLosCrear();
   }
 
-
+  obtenerTodosLosCrear() {
+    this.crearService.postAllCrear().subscribe(
+      (data: CrearModel[]) => {
+        console.log(data);
+        this.listUser = data;
+      },
+    );
   }
+
+  registrarNuevoVehiculo() {
+    this.crearService.crearNuevoVehiculo(this.nuevoVehiculo).subscribe(
+      (response) => {
+        console.log('Vehículo registrado exitosamente', response);
+        // Refresh the list after successful registration if needed
+        this.obtenerTodosLosCrear();
+      },
+      (error) => {
+        console.error('Error al registrar vehículo', error);
+      }
+    );
+  }
+}

@@ -7,31 +7,23 @@
       <br>
       <div class="col-md-8">
         <h4 class="card-title">Vehiculos</h4>
+        <th class="text-dark font-medium fs-4">Placa</th>
+
+        <tbody>
+
         <div class="table-responsive">
+          <td></td>
+          <td>
+            <input type="text" name="placa" class="form-control" [(ngModel)]="nuevoVehiculo.placa" />
+          </td>
 
-            <table class="table table-hover align-middle text-nowrap table-bordered table-striped">
-              <thead>
-              <tr>
-                <th class="text-dark font-medium fs-4">Id</th>
-                <th class="text-dark font-medium fs-4">Placa</th>
+          <br>
 
-              </tr>
-              </thead>
-              <tbody>
-              <tr *ngFor="let user of listUser">
-                <td>{{ user.id }}</td>
-                <td>{{ user.placa }}</td>
-
-                <td>{{ user.horaEntrada }}</td>
-                <td>{{ user.horaSalida }}</td>
-              </tr>
-              <td></td>
-              <td><input type="text"  name="placa" class="form-control" /></td>
-
-              </tbody>
-            </table>
-          <button type="button" style="background-color: #4CAF50; color: white;"  onclick="'http://localhos:3306/parkinglot'">Registrar</button>
-         <br><br> <button type="button" style="background-color: red; color: white;" onclick="alert('El vehiculo no se registrara')">cancelar</button>
+          <button type="button" style="background-color: #4CAF50; color: white;" (click)="registrarNuevoVehiculo()">Registrar</button>
+          <br><br>
+          <a href="http://localhost:4200/component/inicio" style="background-color: red; color: white;"  class="btn btn-dark" role="button">Cancelar</a>
+          <br>
+          <a href="http://localhost:4200/component/vehiculo-in" style="background-color: red; color: white;"  class="btn btn-dark" role="button">Cancelar</a>
         </div>
       </div>
       </div>

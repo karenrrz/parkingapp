@@ -1,8 +1,9 @@
-export interface crearModel{
+export interface CrearModel{
   id: number;
   placa: string;
   horaEntrada: string;
-  horaSalida: string;
+
 }
+
 
 

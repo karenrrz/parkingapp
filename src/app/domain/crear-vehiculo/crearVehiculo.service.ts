@@ -1,19 +1,23 @@
-import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { CrearModel } from "./crearVehiculo.model";
 
-import {Observable} from "rxjs";
+@Injectable({ providedIn: 'root' })
+export class CrearVehiculoService {
 
-import {crearModel} from "./crearVehiculo.model";
+  // The API URL where you will send the POST request
+  apiUserUrl = 'http://localhost:8080/api/parking/create';
 
-@Injectable({providedIn:'root'})
-export class crearVehiculo{
+  constructor(private httpClient: HttpClient) {}
 
-  apiUserUrl = 'http://localhos:8080/parkinglot'
-
-  constructor(private httpClient: HttpClient) {
+  // Method to make a POST request with id, placa, and horaEntrada
+  crearNuevoVehiculo(nuevoVehiculo: { id: number; placa: string; horaEntrada: string }): Observable<any> {
+    return this.httpClient.post(this.apiUserUrl, nuevoVehiculo);
   }
 
-  getAllCrear(): Observable<crearModel[]>{
-    return this.httpClient.get<crearModel[]>(this.apiUserUrl)
+  // Method to get all data
+  postAllCrear(): Observable<CrearModel[]> {
+    return this.httpClient.get<CrearModel[]>(this.apiUserUrl);
   }
 }
