@@ -10,7 +10,7 @@ import { CrearVehiculoService } from "../../domain/crear-vehiculo/crearVehiculo.
 export class CrearVehiculoComponent {
 
   listUser: CrearModel[] = [];
-  nuevoVehiculo: { id: number; placa: string; horaEntrada: string } = { id: 0, placa: '', horaEntrada: '' };
+  nuevoVehiculo: { id: number; placa: string; horaEntrada: string ; tipoVehiculo: string} = { id: 0, placa: '', horaEntrada: '', tipoVehiculo: '' };
 
   constructor(private crearService: CrearVehiculoService) {}
 

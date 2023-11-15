@@ -12,7 +12,7 @@ export class CrearVehiculoService {
   constructor(private httpClient: HttpClient) {}
 
   // Method to make a POST request with id, placa, and horaEntrada
-  crearNuevoVehiculo(nuevoVehiculo: { id: number; placa: string; horaEntrada: string }): Observable<any> {
+  crearNuevoVehiculo(nuevoVehiculo: { id: number; placa: string; horaEntrada: string; tipoVehiculo: string }): Observable<any> {
     return this.httpClient.post(this.apiUserUrl, nuevoVehiculo);
   }
 
