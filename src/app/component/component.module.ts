@@ -15,6 +15,7 @@ import { TableComponent } from "./table/table.component";
 import { CrearVehiculoComponent } from './crear-vehiculo/crear-vehiculo.component';
 import { VehiculoInComponent } from './vehiculo-in/vehiculo-in.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { NumeroComponent } from './numero/numero.component';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { InicioComponent } from './inicio/inicio.component';
   declarations: [
     CrearVehiculoComponent,
     VehiculoInComponent,
-    InicioComponent
+    InicioComponent,
+    NumeroComponent
   ],
 })
 export class ComponentsModule { }

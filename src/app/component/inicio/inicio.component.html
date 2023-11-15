@@ -5,47 +5,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bienvenidos a Parking</title>
-  <!-- Agrega tus enlaces de CSS y Bootstrap aquí -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #e0eaf5;
+    }
+
+    header {
+      background-color: #50c2a5;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    section {
+      margin: 20px;
+    }
+
+    .card {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <h1 class="font-medium my-3">BIENVENIDOS A PARKING</h1>
+  <h1 class="font-weight-bold my-3">BIENVENIDOS A PARKING</h1>
 </header>
 
 <section class="row">
   <div class="col-lg-4 col-md-6">
     <article class="card bg-primary text-white">
       <div class="card-body">
-        <h2 class="card-title text-white">1. Registrar vehículo</h2>
+        <h2 class="card-title">1. Registrar vehículo</h2>
         <a href="http://localhost:4200/component/crear-vehiculo" class="btn btn-dark" role="button">Registrar</a>
       </div>
     </article>
   </div>
-  <br>
 
   <div class="col-lg-4 col-md-6">
     <article class="card bg-info text-white">
       <div class="card-body">
-        <h2 class="card-title text-white">2. Lista de vehículos</h2>
+        <h2 class="card-title">2. Lista de vehículos</h2>
         <a href="http://localhost:4200/component/vehiculo-in" class="btn btn-dark" role="button">Ver</a>
       </div>
     </article>
   </div>
-<br>
-  <br>
 
   <div class="col-lg-4 col-md-6">
     <article class="card bg-success text-white">
       <div class="card-body">
-        <h2 class="card-title text-white">3. Salir de la plataforma</h2>
+        <h2 class="card-title">3. Salir de la plataforma</h2>
         <a href="https://www.google.com/" class="btn btn-dark" role="button">Salir</a>
       </div>
     </article>
   </div>
 </section>
 
-<!-- Agrega tu referencia al archivo JavaScript aquí -->
-
+<!-- Enlaces a Bootstrap y JavaScript al final para mejorar la velocidad de carga -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

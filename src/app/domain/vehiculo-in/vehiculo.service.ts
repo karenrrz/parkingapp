@@ -13,9 +13,9 @@ export class VehiculoService {
     return this.httpClient.get<UserModel[]>(this.apiUserUrl);
   }
 
-  getVehiculoByPlaca(placa: string): Observable<UserModel> {
+  getVehiculoByPlaca(placa: string): Observable<UserModel[]> {
     const url = `${this.apiUserUrl}?placa=${placa}`;
-    return this.httpClient.get<UserModel>(url);
+    return this.httpClient.get<UserModel[]>(url);
   }
     horaSalida(id: number): Observable<UserModel> {
         const url = `${this.apiUserUrl}${id}`;

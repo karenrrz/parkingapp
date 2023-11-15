@@ -23,16 +23,17 @@ export class VehiculoInComponent {
             console.log(data);
         });
     }
-
-    searchByPlaca(): void {
-        if (this.placaSearch) {
-            this.vehiculoService.getVehiculoByPlaca(this.placaSearch).subscribe(data => {
-                this.listUser = data ? [data] : [];
-            });
-        } else {
-            this.loadAllVehiculos();
-        }
+  searchByPlaca(): void {
+    if (this.placaSearch) {
+      this.vehiculoService.getVehiculoByPlaca(this.placaSearch).subscribe(data => {
+        this.listUser = data;
+        console.log(data);
+      });
+    } else {
+      // Si la búsqueda está vacía, cargar todos los vehículos
+      this.loadAllVehiculos();
     }
+  }
 
     horaSalida(id: number): void {
         this.vehiculoService.horaSalida(id).subscribe(updatedUser => {
@@ -44,10 +45,6 @@ export class VehiculoInComponent {
                 this.listUser[index] = updatedUser;
             }
 
-            // Elimina el vehículo de la lista después de actualizar la hora de salida
-            // Esto asume que la operación de horaSalida en el servidor no elimina el vehículo, solo actualiza la hora de salida
-            // Si la operación en el servidor elimina el vehículo, entonces debes quitar esta línea
-            // y dejar que la lista se actualice con loadAllVehiculos() en el próximo paso.
             this.listUser.splice(index, 1);
         });
     }
